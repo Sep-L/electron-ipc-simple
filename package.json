@@ -1,0 +1,31 @@
+{
+  "name": "electron-ipc-simple",
+  "private": true,
+  "version": "0.1.4",
+  "description": "基于 invoke/handle 的 Electron IPC 通信框架",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./renderer": {
+      "types": "./dist/renderer.d.ts",
+      "default": "./dist/renderer.js"
+    }
+  },
+  "peerDependencies": {
+    "electron": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
